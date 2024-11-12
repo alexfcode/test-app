@@ -1,28 +1,16 @@
-function Accordion() {
+function Accordion(props: any) {
     console.log("Accordion rendering");
-    // debugger;
-    // return (
-    //   <div>
-    //     <h3>Меню</h3>
-    //     <ul>
-    //       <li>1</li>
-    //       <li>2</li>
-    //       <li>3</li>
-    //       <li>4</li>
-    //       <li>5</li>
-    //     </ul>
-    //   </div>
-    // );
     return (<>
-  <AccordionTitle  />
+  <AccordionTitle title={props.title} />
   <AccordionBody  /> 
     </>
   )
   }
 
-  function AccordionTitle() {
+  function AccordionTitle(props: any) {
     console.log("AccordionTitle rendering");
-  return <h3>Меню</h3>
+  return <h3>
+    {props.title}</h3>
   }
   
   function AccordionBody() {
